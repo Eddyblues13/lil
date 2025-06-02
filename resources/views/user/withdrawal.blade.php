@@ -8,7 +8,7 @@
     <meta name="keywords" content="withdrawal, funds, money, transfer">
     <meta name="author" content="">
     <meta name="theme-color" content="#000" />
-    <title>Withdraw Funds - cytopiacapitalpro.</title>
+    <title>Withdraw Funds - lilexchangepro.</title>
 
     <!-- Favicon and icons -->
     <link href="favicon.png" rel="shortcut icon" type="image/png">
@@ -114,7 +114,7 @@
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
         <div class="sidebar-header">
-            <img src="https://cytopiacapitalpro.com/logo.png" alt="logo">
+            <img src="https://lilexchangepro.com/logo.png" alt="logo">
         </div>
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
@@ -145,7 +145,7 @@
                             <a href="javascript:void(0)" onclick="openSidebar()"><img src="{{asset('images/menu.png')}}"
                                     alt="menu" width="50px"></a>
                             <div>
-                                <img src="https://cytopiacapitalpro.com/logo.png" alt="logo"
+                                <img src="https://lilexchangepro.com/logo.png" alt="logo"
                                     style="width:200px; margin-left: 30px;">
                             </div>
                         </nav>
@@ -243,7 +243,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right">
-                    Copyright 2022 10x cytopiacapitalpro.</a> All Rights Reserved.
+                    Copyright 2022 10x lilexchangepro.</a> All Rights Reserved.
                 </div>
             </div>
         </div>

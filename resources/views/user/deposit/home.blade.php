@@ -1,6 +1,6 @@
 @extends('user.layouts.app')
 
-@section('title', 'Deposit - cytopiacapitalpro')
+@section('title', 'Deposit - lilexchangepro')
 
 @section('content')
 <div class="iq-top-navbar header" style="margin-top:40px; background-color:transparent; width:100%;">
@@ -11,7 +11,7 @@
                     <img src="{{ asset('images/menu.png') }}" alt="menu" width="50px" style="margin-top:15px;">
                 </a>
                 <div>
-                    <img src="https://cytopiacapitalpro.com/logo.png" alt="logo"
+                    <img src="https://lilexchangepro.com/logo.png" alt="logo"
                         style="padding-bottom:0px; width:200px; margin-top:-65px; margin-left:80px;">
                 </div>
             </div>

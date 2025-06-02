@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#000" />
 
     <!-- Site Properties -->
-    <title>@yield('title', 'Dashboard - cytopiacapitalpro.')</title>
+    <title>@yield('title', 'Dashboard - lilexchangepro.')</title>
 
     <!-- Favicon -->
     <link href="{{ asset('favicon.png') }}" rel="shortcut icon" type="image/png">
@@ -75,7 +75,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right">
-                    Copyright {{ date('Y') }} cytopiacapitalpro. All Rights Reserved.
+                    Copyright {{ date('Y') }} lilexchangepro. All Rights Reserved.
                 </div>
             </div>
         </div>

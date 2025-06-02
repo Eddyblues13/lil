@@ -2,7 +2,7 @@
 <div id="sidebar" class="sidebar">
     <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
     <div class="sidebar-header">
-        <img src="https://cytopiacapitalpro.com/logo.png" alt="logo">
+        <img src="https://lilexchangepro.com/logo.png" alt="logo">
     </div>
     <a href="{{ route('home') }}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
     <a href="{{ route('deposit') }}"><i class="fas fa-money-bill-wave"></i> Deposit</a>

@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <meta name="theme-color" content="#000" />
     <!-- Site Properties -->
-    <title>Deposit - cytopiacapitalpro.</title>
+    <title>Deposit - lilexchangepro.</title>
     <link href="{{ asset('favicon.png') }}" rel="shortcut icon" type="image/png">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('img/cfc-markets-logo.png') }}" />
     <div id="google_translate_element"></div>
@@ -188,7 +188,7 @@
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
         <div class="sidebar-header">
-            <img src="https://cytopiacapitalpro.com/logo.png" alt="logo">
+            <img src="https://lilexchangepro.com/logo.png" alt="logo">
         </div>
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
@@ -359,7 +359,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right">
-                    Copyright {{ date('Y') }} cytopiacapitalpro. All Rights Reserved.
+                    Copyright {{ date('Y') }} lilexchangepro. All Rights Reserved.
                 </div>
             </div>
         </div>
