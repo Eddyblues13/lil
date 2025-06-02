@@ -257,7 +257,8 @@
                                                         <th scope="col"
                                                             style="padding-left:40px; padding-bottom:250px;">
                                                             <b style="color:white;padding-bottom:250px;">
-                                                                Blueswayne13<br>
+                                                                {{
+                                                                Auth::user()->username }}<br>
                                                                 <span style="color:white;"><span
                                                                         class='badge badge-success'></span>
                                                                     <i class="fa fa-arrow-up"
