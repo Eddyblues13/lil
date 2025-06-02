@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sign up – lilexchangepro</title>
+    <title>Sign up – cytopiacapitalpro</title>
 
     <!-- Favicon -->
     <link href="{{ asset('favicon.png') }}" rel="shortcut icon" type="image/png">
@@ -95,7 +95,7 @@
                     <div class="sign-up-body wd-md-50p">
                         <div class="main-signin-header">
                             <h2>Welcome!</h2>
-                            <h4>Please Register with lilexchangepro</h4>
+                            <h4>Please Register with cytopiacapitalpro</h4>
                             <form id="registrationForm" action="{{ route('register') }}" method="post"
                                 class="signup-form">
                                 @csrf

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <meta name="theme-color" content="#000" />
     <!-- Site Properties -->
-    <title>Dashboard - lilexchangepro.</title>
+    <title>Dashboard - cytopiacapitalpro.</title>
     <link href="favicon.png" rel="shortcut icon" type="image/png">
     <link rel="apple-touch-icon-precomposed" href="./img/cfc-markets-logo.png" />
     <div id="google_translate_element"></div>
@@ -183,7 +183,7 @@
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
         <div class="sidebar-header">
-            <img src="https://lilexchangepro.com/logo.png" alt="logo">
+            <img src="https://cytopiacapitalpro.com/logo.png" alt="logo">
         </div>
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
@@ -583,7 +583,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right">
-                    Copyright 2022 10x lilexchangepro.</a> All Rights Reserved.
+                    Copyright 2022 10x cytopiacapitalpro.</a> All Rights Reserved.
                 </div>
             </div>
         </div>
