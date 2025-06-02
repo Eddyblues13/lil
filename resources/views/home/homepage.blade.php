@@ -57,7 +57,7 @@
                                         <a href="{{ route('login') }}" style="hover-color:#000"
                                             class="uk-button cha uk-button-primary uk-border-rounded">Login
                                             Account</a>
-                                        <a href="register.html"
+                                        <a href="{{ route('register') }}"
                                             class="uk-button uk-button-primary cha uk-border-rounded">Open
                                             Account</a>
                                     </div>
@@ -206,7 +206,7 @@
                         </div>
                     </div>
                     <p class="uk-text-small uk-text-muted" style="color:#E9E8E8;">Explore the markets at your own
-                        pace with short online courses. <a href="register.html"><span
+                        pace with short online courses. <a href="{{ route('register') }}"><span
                                 class="uk-label uk-text-small uk-border-pill"
                                 style="background-color: rgb(196, 0, 0);">Sign up</span></a></p>
                 </div>
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <li style="color:#E9E8E8;">Online webinars &amp; local seminars</li>
                                     <li style="color:#E9E8E8;">Your own Account Manager</li>
                                 </ul>
-                                <a href="register.html"
+                                <a href="{{ route('register') }}"
                                     class="uk-button uk-button-secondary uk-border-rounded uk-margin-small-top"
                                     style="background-image: linear-gradient(to right, rgb(196, 0, 0) , rgb(0, 0, 0));">Open
                                     Account</a>
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <li style="color:#E9E8E8;">Hi-tech forex trading tools</li>
                                     <li style="color:#E9E8E8;">Ultimate risk protection &amp; security</li>
                                 </ul>
-                                <a href="register.html"
+                                <a href="{{ route('register') }}"
                                     class="uk-button uk-button-secondary uk-border-rounded uk-margin-small-top"
                                     style="background-image: linear-gradient(to right, rgb(196, 0, 0) , rgb(0, 0, 0));">Open
                                     Account</a>
@@ -639,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <li style="color:#E9E8E8;">Tax-free spread betting profits</li>
                                     <li style="color:#E9E8E8;">Low minimum deposit</li>
                                 </ul>
-                                <a href="register.html"
+                                <a href="{{ route('register') }}"
                                     class="uk-button uk-button-secondary uk-border-rounded uk-margin-small-top"
                                     style="background-image: linear-gradient(to right, rgb(196, 0, 0) , rgb(0, 0, 0));">Open
                                     an account</a>
@@ -663,7 +663,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <li style="color:#E9E8E8;">Advanced trading tools</li>
                                     <li style="color:#E9E8E8;">Tax-free spread betting profits</li>
                                 </ul>
-                                <a href="register.html"
+                                <a href="{{ route('register') }}"
                                     class="uk-button uk-button-secondary uk-border-rounded uk-margin-small-top"
                                     style="background-image: linear-gradient(to right, rgb(196, 0, 0) , rgb(0, 0, 0));">Open
                                     an account</a>
@@ -688,7 +688,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <li style="color:#E9E8E8;">Tax-free spread betting profits</li>
                                     <li style="color:#E9E8E8;">Low minimum deposit</li>
                                 </ul>
-                                <a href="register.html"
+                                <a href="{{ route('register') }}"
                                     class="uk-button uk-button-secondary uk-border-rounded uk-margin-small-top"
                                     style="background-image: linear-gradient(to right, rgb(196, 0, 0) , rgb(0, 0, 0));">Open
                                     an account</a>
@@ -714,7 +714,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <li style="color:#E9E8E8;">Pay using bitcoin only</li>
                                     <li style="color:#E9E8E8;">Use any broker</li>
                                 </ul>
-                                <a href="register.html"
+                                <a href="{{ route('register') }}"
                                     class="uk-button uk-button-secondary uk-border-rounded uk-margin-small-top"
                                     style="background-image: linear-gradient(to right, rgb(196, 0, 0) , rgb(0, 0, 0));">Open
                                     an account</a>
@@ -1207,8 +1207,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <a href="{{ route('register') }}" class="uk-button uk-button-primary uk-border-rounded"
                             style="background-image: linear-gradient(to right, rgb(196, 0, 0) , rgb(0, 0, 0));">Setup
                             your trading account</a>
-                        <a href="faq.html"
-                            class="uk-button uk-button-default uk-border-rounded uk-margin-small-left">Discover our
+                        <a href="/" class="uk-button uk-button-default uk-border-rounded uk-margin-small-left">Discover
+                            our
                             platform</a>
                         <p style="color:#E9E8E8;">Registration takes only 40 seconds!</p>
                     </div>
