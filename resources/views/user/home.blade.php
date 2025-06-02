@@ -183,7 +183,7 @@
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
         <div class="sidebar-header">
-            <img src="https://cytopiacapitalpro.com/logo.png" alt="logo">
+            <img src="{{asset('static/logo.png')}}" alt="logo">
         </div>
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
