@@ -191,8 +191,10 @@
                 </div>
                 <div class="uk-width-1-2@m">
                     <div class="uk-inline uk-dark in-wave-video uk-margin-small-bottom">
-                        <img class="uk-border-rounded uk-width-1-1" src="static/i12.png" data-src="static/i12.png"
-                            alt="wave-video" width="533" height="355" data-uk-img>
+                        <iframe src="https://www.youtube.com/embed/Gc2en3nHxA4" allow="autoplay; encrypted-media"
+                            allowfullscreen="" width="100%" height="315" frameborder="0"></iframe>
+                        {{-- <img class="uk-border-rounded uk-width-1-1" src="static/i12.png" data-src="static/i12.png"
+                            alt="wave-video" width="533" height="355" data-uk-img> --}}
                         <div class="uk-position-center">
                             <a href="#" data-uk-toggle>
                                 <div class="in-play-button"></div>

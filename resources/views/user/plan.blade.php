@@ -23,14 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <!-- Typography CSS -->
-    <link rel="stylesheet" href="{{asset('css/typography.css')}}">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+
     <style>
         /* Your existing styles from dashboard */
         * {
@@ -202,14 +195,14 @@
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
         <div class="sidebar-header">
-            <img src="https://lilexchangepro.com/logo.png" alt="logo">
+            <img src="{{asset('static/logo.png')}}" alt="logo">
         </div>
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
         <a href="{{ route('withdraw') }}"><i class="fa fa-credit-card"></i> Withdrawal</a>
-        <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
+        <!-- <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
         <a href="{{ route('transactions') }}"><i class="fa fa-history"></i> Transaction History</a>
-        <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a>
+        <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a> -->
         <a href="{{ route('settings') }}"><i class="fa fa-cog"></i> Settings</a>
         <a href="{{ route('verification') }}"><i class="fa fa-check-circle"></i> Account Verification</a>
         <a href="{{ route('user.logout') }}"
@@ -243,7 +236,7 @@
                                     src="{{asset('images/menu.png')}}" alt="menu" width="50px"
                                     style="margin-top:15px;"></a>
                             <div>
-                                <img src="https://lilexchangepro.com/logo.png" alt="logo"
+                                <img src="{{asset('static/logo.png')}}" alt="logo"
                                     style="padding-bottom:0px; width:200px; margin-top:-65px; margin-left:80px;">
                             </div>
                         </div>

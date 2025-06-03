@@ -3,7 +3,7 @@
 @section('title', 'Deposit - lilexchangepro')
 
 @section('content')
-<div class="iq-top-navbar header" style="margin-top:40px; background-color:transparent; width:100%;">
+<div class="iq-top-navbar header" style="margin-top:50px; background-color:transparent; width:100%;">
     <div class="iq-navbar-custom" style="width:100%;">
         <nav class="navbar navbar-expand-lg navbar-light p-0" style="width:100%;">
             <div style="margin-top:-80px; margin-right:-150px; width:100%; background-color:#000; color:#dbdbdb;">
@@ -11,7 +11,7 @@
                     <img src="{{ asset('images/menu.png') }}" alt="menu" width="50px" style="margin-top:15px;">
                 </a>
                 <div>
-                    <img src="https://lilexchangepro.com/logo.png" alt="logo"
+                    <img src="{{asset('static/logo.png')}}" alt="logo"
                         style="padding-bottom:0px; width:200px; margin-top:-65px; margin-left:80px;">
                 </div>
             </div>

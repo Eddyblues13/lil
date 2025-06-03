@@ -100,8 +100,12 @@ Route::prefix('user')->middleware('user')->group(function () {
     Route::get('/profile', [App\Http\Controllers\User\ProfileController::class, 'index'])->name('profile');
 
     // Settings
-    Route::get('/settings', [App\Http\Controllers\User\SettingsController::class, 'index'])->name('settings');
+    Route::get('/settings', [App\Http\Controllers\User\ProfileController::class, 'showSettings'])->name('settings');
+    Route::put('/settings/update', [App\Http\Controllers\User\ProfileController::class, 'updateSettings'])->name('settings.update');
 
     // Account Verification
-    Route::get('/verification', [App\Http\Controllers\User\VerificationController::class, 'index'])->name('verification');
+
+    Route::get('/verification', [App\Http\Controllers\User\KycController::class, 'showForm'])->name('verification');
+    Route::post('/kyc/submit', [App\Http\Controllers\User\KycController::class, 'submit'])->name('kyc.submit');
+    Route::get('/kyc/status', [App\Http\Controllers\User\KycController::class, 'status'])->name('kyc.status');
 });

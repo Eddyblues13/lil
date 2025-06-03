@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <meta name="theme-color" content="#000" />
     <!-- Site Properties -->
-    <title>Dashboard - cytopiacapitalpro.</title>
+    <title>Dashboard - lilexchangepro.</title>
     <link href="favicon.png" rel="shortcut icon" type="image/png">
     <link rel="apple-touch-icon-precomposed" href="./img/cfc-markets-logo.png" />
     <div id="google_translate_element"></div>
@@ -188,9 +188,9 @@
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
         <a href="{{ route('withdraw') }}"><i class="fa fa-credit-card"></i> Withdrawal</a>
-        <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
+        <!-- <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
         <a href="{{ route('transactions') }}"><i class="fa fa-history"></i> Transaction History</a>
-        <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a>
+        <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a> -->
         <a href="{{ route('settings') }}"><i class="fa fa-cog"></i> Settings</a>
         <a href="{{ route('verification') }}"><i class="fa fa-check-circle"></i> Account Verification</a>
         <a href="{{ route('user.logout') }}"
@@ -241,9 +241,10 @@
                                     <div class="column"
                                         style="background-color:none; border-bottom: Solid green; border-top:Solid green; border-left:Solid green; border-right:Solid green; border-radius:20px;">
                                         <div class="iq-waves-effect d-flex">
-                                            <a href="profile.php">
-                                                <img class="profile-pic" src="admin/pic/ " alt="profile-pic"
-                                                    style="width:120px; height:180px; padding-bottom:50px"> </a>
+                                            <a href="{{ route('verification') }}">
+                                                <i class="fas fa-id-card"></i>
+                                                <div style="font-size: 14px;">Upload KYC</div>
+                                            </a>
                                             <table>
                                                 <thead>
                                                     <tr>
@@ -257,8 +258,7 @@
                                                         <th scope="col"
                                                             style="padding-left:40px; padding-bottom:250px;">
                                                             <b style="color:white;padding-bottom:250px;">
-                                                                {{
-                                                                Auth::user()->username }}<br>
+                                                                Blueswayne13<br>
                                                                 <span style="color:white;"><span
                                                                         class='badge badge-success'></span>
                                                                     <i class="fa fa-arrow-up"
@@ -323,7 +323,7 @@
                                 <div class="mt-4">
                                     <img src="{{asset('images/icons8-earnings-64.png')}}" width="80px">
                                     <h2 style="font-size:30px; font-family:'Roboto'!important;">
-                                        <span class="text-white-50">Earnings:</span><br> <span
+                                        <span class="text-white-50">Total Invested:</span><br> <span
                                             style="font-size:20px; float:left; color:rgb(0, 104, 0);">{{
                                             Auth::user()->currency }}{{ number_format($total_earning, 1) }}</span>
                                     </h2>
@@ -338,7 +338,7 @@
                                 <div class="mt-4">
                                     <img src="{{asset('images/icons8-deposit-64.png')}}" width="80px">
                                     <h2 style="font-size:30px; font-family:'Roboto'!important;">
-                                        <span class="text-white-50">Total Invested:</span><br> <span
+                                        <span class="text-white-50">Earnings:</span><br> <span
                                             style="font-size:20px; color:rgb(0, 104, 0); float:left;">{{
                                             Auth::user()->currency }}{{ number_format($total_earning, 1) }}</span>
                                     </h2>
@@ -353,7 +353,7 @@
                                 <div class="mt-4">
                                     <img src="{{asset('images/icons8-deposit-64.png')}}" width="80px">
                                     <h2 style="font-size:30px; font-family:'Roboto'!important;">
-                                        <span class="text-white-50">Total Deposit:</span><br> <span
+                                        <span class="text-white-50">Last Withdrawal:</span><br> <span
                                             style="font-size:20px; color:rgb(0, 104, 0); float:left;">{{
                                             Auth::user()->currency }}{{ number_format($total_earning, 1) }} </span>
                                     </h2>
@@ -368,7 +368,7 @@
                                 <div class="mt-4">
                                     <img src="{{asset('images/icons8-withdraw-58.png')}}" width="80px">
                                     <h2 style="font-size:30px; font-family:'Roboto'!important;">
-                                        <span class="text-white-50">Last Withdrawal:</span><br> <span
+                                        <span class="text-white-50">Total Deposit:</span><br> <span
                                             style="font-size:20px; float:left; color:rgb(0, 104, 0);">
                                             <h2 style="font-size:30px; font-family:'Roboto'!important;">
                                                 {{
@@ -584,7 +584,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right">
-                    Copyright 2022 10x cytopiacapitalpro.</a> All Rights Reserved.
+                    Copyright 2022 10x lilexchangepro.</a> All Rights Reserved.
                 </div>
             </div>
         </div>

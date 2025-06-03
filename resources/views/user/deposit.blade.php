@@ -188,14 +188,14 @@
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
         <div class="sidebar-header">
-            <img src="https://lilexchangepro.com/logo.png" alt="logo">
+            <img src="{{asset('static/logo.png')}}" alt="logo">
         </div>
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
         <a href="{{ route('withdraw') }}"><i class="fa fa-credit-card"></i> Withdrawal</a>
-        <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
+        <!-- <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
         <a href="{{ route('transactions') }}"><i class="fa fa-history"></i> Transaction History</a>
-        <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a>
+        <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a> -->
         <a href="{{ route('settings') }}"><i class="fa fa-cog"></i> Settings</a>
         <a href="{{ route('verification') }}"><i class="fa fa-check-circle"></i> Account Verification</a>
         <a href="{{ route('user.logout') }}"
@@ -210,7 +210,7 @@
     <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
 
     <!-- Header -->
-    <div class="iq-top-navbar header" style="margin-top:40px; background-color:transparent; width:100%;">
+    <div class="iq-top-navbar header" style="margin-top:50px; background-color:transparent; width:100%;">
         <div class="iq-navbar-custom" style="width:100%;">
             <nav class="navbar navbar-expand-lg navbar-light p-0" style="width:100%;">
                 <div style="margin-top:-80px; margin-right:-150px; width:100%; background-color:#000; color:#dbdbdb;">
@@ -276,8 +276,10 @@
                                                 value="{{ $wallet->id }}" required>
                                             <label for="wallet_{{ $wallet->id }}">
                                                 <div class="method-content">
-                                                    <img src="{{ $wallet->icon }}" alt="{{ $wallet->coin_name }}"
-                                                        width="40">
+                                                    {{-- <img src="{{ asset($wallet->icon) }}"
+                                                        alt="{{ $wallet->coin_name }}" width="40" height="40"
+                                                        class="me-3"> --}}
+
                                                     <div>
                                                         <h6>{{ $wallet->coin_name }} ({{ $wallet->coin_code }})</h6>
                                                         <small>{{ $wallet->wallet_name }} - {{ $wallet->network_type
