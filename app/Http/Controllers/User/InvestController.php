@@ -14,7 +14,11 @@ class InvestController extends Controller
     public function index()
     {
         $plans = Plan::all();
-        return view('user.plan', compact('plans'));
+        $planHistories = PlanHistory::where('user_id', Auth::id())
+            ->with('plan') // eager load related Plan
+            ->latest()
+            ->get();
+        return view('user.plan', compact('plans', 'planHistories'));
     }
 
     // Handle investment submission
@@ -43,6 +47,6 @@ class InvestController extends Controller
         // Deduct from user balance (you'll need to implement this)
         // Auth::user()->decrement('balance', $plan->price);
 
-        return redirect()->route('dashboard')->with('success', 'Investment successful!');
+        return redirect()->back()->with('success', 'Investment successful!');
     }
 }

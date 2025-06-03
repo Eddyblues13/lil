@@ -188,8 +188,8 @@
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
         <a href="{{ route('withdraw') }}"><i class="fa fa-credit-card"></i> Withdrawal</a>
-        <!-- <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
-        <a href="{{ route('transactions') }}"><i class="fa fa-history"></i> Transaction History</a>
+       <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
+         <!-- <a href="{{ route('transactions') }}"><i class="fa fa-history"></i> Transaction History</a>
         <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a> -->
         <a href="{{ route('settings') }}"><i class="fa fa-cog"></i> Settings</a>
         <a href="{{ route('verification') }}"><i class="fa fa-check-circle"></i> Account Verification</a>
