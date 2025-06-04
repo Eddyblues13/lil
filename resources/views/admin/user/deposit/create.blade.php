@@ -5,7 +5,7 @@
         <div class="content bg-dark">
             <div class="page-inner">
                 <div class="mt-2 mb-4">
-                    <h1 class="title1 text-light">Create Deposit for {{ $user->name }}</h1>
+                    <h1 class="title1 text-light">Create Deposit for {{ $user->username }}</h1>
                 </div>
 
                 <div class="row">

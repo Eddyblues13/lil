@@ -23,7 +23,7 @@
         <div class="content bg-dark">
             <div class="page-inner">
                 <div class="mt-2 mb-4 d-flex justify-content-between align-items-center">
-                    <h1 class="title1 text-light">Withdrawals for {{ $user->name }}</h1>
+                    <h1 class="title1 text-light">Withdrawals for {{ $user->username }}</h1>
                     <div>
                         <a href="{{ route('admin.users.withdrawals.create', $user->id) }}" class="btn btn-primary">Add
                             New Withdrawal</a>

@@ -29,7 +29,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12 ">
-                                    <h1 class="d-inline text-primary">{{$user->name}}</h1>
+                                    <h1 class="d-inline text-primary">{{$user->username}}</h1>
                                     <span></span>
                                     <div class="d-inline">
                                         <div class="float-right btn-group">
@@ -241,7 +241,7 @@
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body bg-dark">
-                    <p class="text-light">This message will be sent to {{$user->name}}</p>
+                    <p class="text-light">This message will be sent to {{$user->username}}</p>
                     <form style="padding:3px;" role="form" method="post" action="{{ route('admin.send.mail')}}">
 
                         @csrf
@@ -270,7 +270,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header bg-dark">
-                    <h4 class="modal-title text-light">Add Signal strength for {{$user->name}} </h4>
+                    <h4 class="modal-title text-light">Add Signal strength for {{$user->username}} </h4>
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body bg-dark">
@@ -301,7 +301,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header bg-dark">
-                    <h4 class="modal-title text-light">Edit {{$user->name}} details</h4>
+                    <h4 class="modal-title text-light">Edit {{$user->username}} details</h4>
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body bg-dark">
@@ -310,7 +310,7 @@
                         @method('PUT')
                         <div class="form-group">
                             <label class="text-light">First Name</label>
-                            <input class="form-control bg-dark text-light" id="input1" value="{{$user->name}}"
+                            <input class="form-control bg-dark text-light" id="input1" value="{{$user->username}}"
                                 type="text" name="username" required>
                         </div>
                         <div class="form-group">
@@ -360,7 +360,7 @@
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body bg-dark">
-                    <p class="text-light">Are you sure you want to reset password for {{$user->name}} to <span
+                    <p class="text-light">Are you sure you want to reset password for {{$user->username}} to <span
                             class="text-primary font-weight-bolder">user01236</span></p>
                     <a class="btn btn-light" href="{{ route('reset.password', $user->id) }}">Reset Now</a>
                 </div>
@@ -375,7 +375,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header bg-dark">
-                    <h4 class="modal-title text-light">You are about to login as {{$user->name}}.</strong></h4>
+                    <h4 class="modal-title text-light">You are about to login as {{$user->username}}.</strong></h4>
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body bg-dark">
@@ -396,7 +396,7 @@
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body bg-dark">
-                    <p class="text-light">You are clearing account for {{$user->name}} to $0.00</p>
+                    <p class="text-light">You are clearing account for {{$user->username}} to $0.00</p>
                     <a class="btn btn-light" href="{{route('clear.account',$user->id)}}">Proceed</a>
                 </div>
             </div>
@@ -415,7 +415,7 @@
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body bg-dark p-3">
-                    <p class="text-light">Are you sure you want to delete {{$user->name}}
+                    <p class="text-light">Are you sure you want to delete {{$user->username}}
                         Account? Everything
                         associated
                         with this account will be loss.</p>

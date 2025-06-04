@@ -3,7 +3,7 @@
     <div class="content bg-dark">
         <div class="page-inner">
             <div class="mt-2 mb-4">
-                <h1 class="title1 text-light">Manage Trades for {{ $user->name }}</h1>
+                <h1 class="title1 text-light">Manage Trades for {{ $user->username }}</h1>
             </div>
 
             <!-- Create Trade Form -->
@@ -33,7 +33,7 @@
                                     <h5 class="text-light">Symbol</h5>
                                     <select name="symbol" class="form-control text-light bg-dark" required>
                                         <option value="">Select Symbol</option>
-                                        
+
                                         <!-- Cryptocurrencies -->
                                         <option value="BTCUSDT">BTC/USDT</option>
                                         <option value="ETHUSDT">ETH/USDT</option>
@@ -51,7 +51,7 @@
                                         <option value="BRK.A">Berkshire Hathaway (BRK.A)</option>
                                         <option value="JPM">JPMorgan Chase (JPM)</option>
                                     </select>
-                                    
+
                                     <small id="symbol-error" class="text-danger"></small>
                                 </div>
                                 {{-- <div class="form-group col-md-4">

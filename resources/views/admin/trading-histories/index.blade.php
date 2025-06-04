@@ -108,7 +108,7 @@
                         <select name="user_id" class="form-control bg-dark text-light" required>
                             <option value="">Select User</option>
                             @foreach($users as $user)
-                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                            <option value="{{ $user->id }}">{{ $user->username }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -171,7 +171,7 @@
                         <label class="text-light">User</label>
                         <select name="user_id" id="editUserId" class="form-control bg-dark text-light" required>
                             @foreach($users as $user)
-                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                            <option value="{{ $user->id }}">{{ $user->username }}</option>
                             @endforeach
                         </select>
                     </div>

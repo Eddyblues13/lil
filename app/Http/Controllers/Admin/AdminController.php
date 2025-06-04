@@ -502,7 +502,7 @@ class AdminController extends Controller
 
         if ($user) {
             $details = [
-                'name' => $user->name,
+                'name' => $user->username,
                 'transactionType' => $transactionType,
                 'amount' => $amount,
                 'transactionCategory' => $transactionCategory,

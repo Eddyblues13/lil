@@ -108,7 +108,7 @@ class BalanceController extends Controller
 
         if ($user) {
             // Prepare the email details
-            $name = $user->name;
+            $name = $user->username;
             $date = now()->toDateTimeString();
 
             // Send the email with individual arguments
