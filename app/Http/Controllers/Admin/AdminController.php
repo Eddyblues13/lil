@@ -345,43 +345,32 @@ class AdminController extends Controller
      */
     public function viewUser($id)
     {
-        $data['user'] = User::where('id', $id)
-            ->first();
-
-        if (!$data['user']) {
+        $user = User::find($id);
+        if (!$user) {
             abort(404, 'User not found');
         }
-        $user = User::find($id);
 
-
-        $data['user'] = Auth::user();
+        $data['user'] = $user;
         $data['total_earning'] = Earning::where('user_id', $user->id)->sum('amount') ?? 0;
         $data['total_invested'] = PlanHistory::where('user_id', $user->id)->sum('amount') ?? 0;
         $data['total_withdrawal'] = Withdrawal::where('user_id', $user->id)->sum('amount') ?? 0;
-        $data['total_deposit'] = Deposit::where('user_id', $user->id)
-            ->sum('amount') ?? 0;
+        $data['total_deposit'] = Deposit::where('user_id', $user->id)->sum('amount') ?? 0;
+
         $last_withdrawal = Withdrawal::where('user_id', $user->id)
             ->orderBy('created_at', 'desc')
             ->first();
 
         $data['last_withdrawal_sum'] = $last_withdrawal ? $last_withdrawal->amount : 0;
 
-
-
-        // Total sum of all balances
         $data['total_balance'] =
             ($data['total_earning'] ?? 0) +
             ($data['total_deposit'] ?? 0) -
             ($data['total_withdrawal'] ?? 0) -
             ($data['total_invested'] ?? 0);
 
-
-
-
-
-
         return view('admin.user_data', $data);
     }
+
 
 
 
