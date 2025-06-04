@@ -20402,10 +20402,10 @@
                     return this.animations.length > 0
                 }, Object.defineProperty(e.prototype, "isHover", {
                     get: function() {
-                        return !!this.isInteractive() && this.interactions.isHover
+                        return !!this.iscytopia() && this.interactions.isHover
                     },
                     set: function(t) {
-                        (t = j.toBoolean(t)) !== this.isHover && this.isInteractive() && (this.interactions.isHover = t, t ? this.handleOver() : this.handleOut())
+                        (t = j.toBoolean(t)) !== this.isHover && this.iscytopia() && (this.interactions.isHover = t, t ? this.handleOver() : this.handleOut())
                     },
                     enumerable: !0,
                     configurable: !0
@@ -20423,19 +20423,19 @@
                     configurable: !0
                 }), Object.defineProperty(e.prototype, "isDown", {
                     get: function() {
-                        return !!this.isInteractive() && this.interactions.isDown
+                        return !!this.iscytopia() && this.interactions.isDown
                     },
                     set: function(t) {
-                        t = j.toBoolean(t), this.isInteractive() && this.isDown != t && (this.interactions.isDown = t, t ? this.handleDown() : this.handleUp())
+                        t = j.toBoolean(t), this.iscytopia() && this.isDown != t && (this.interactions.isDown = t, t ? this.handleDown() : this.handleUp())
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(e.prototype, "isFocused", {
                     get: function() {
-                        return !!this.isInteractive() && this.interactions.isFocused
+                        return !!this.iscytopia() && this.interactions.isFocused
                     },
                     set: function(t) {
-                        t = j.toBoolean(t), this.focusable && this.isFocused != t && this.isInteractive() && (this.interactions.isFocused = t, !0 === t ? this.handleFocus() : this.handleBlur())
+                        t = j.toBoolean(t), this.focusable && this.isFocused != t && this.iscytopia() && (this.interactions.isFocused = t, !0 === t ? this.handleFocus() : this.handleBlur())
                     },
                     enumerable: !0,
                     configurable: !0
@@ -20881,7 +20881,7 @@
                     },
                     enumerable: !0,
                     configurable: !0
-                }), e.prototype.isInteractive = function() {
+                }), e.prototype.iscytopia = function() {
                     return !!this._interaction
                 }, Object.defineProperty(e.prototype, "focusable", {
                     get: function() {
@@ -20889,7 +20889,7 @@
                     },
                     set: function(t) {
                         var e = this;
-                        t = j.toBoolean(t), this.setPropertyValue("focusable", t) && (t || this.isInteractive()) && (this.interactions.focusable = t, t ? this.setSVGAttribute({
+                        t = j.toBoolean(t), this.setPropertyValue("focusable", t) && (t || this.iscytopia()) && (this.interactions.focusable = t, t ? this.setSVGAttribute({
                             focusable: t
                         }) : this.removeSVGAttribute("focusable"), this.interactions.setEventDisposer("sprite-focusable", t, function() {
                             return new h.c([e.events.on("blur", e.handleBlur, e, !1), e.events.on("focus", e.handleFocus, e, !1)])
@@ -20944,7 +20944,7 @@
                     },
                     set: function(t) {
                         var e = this;
-                        t = j.toBoolean(t), this.setPropertyValue("draggable", t) && (t || this.isInteractive()) && (this.applyCursorStyle(), this.interactions.draggable = t, this.interactions.setEventDisposer("sprite-draggable", t, function() {
+                        t = j.toBoolean(t), this.setPropertyValue("draggable", t) && (t || this.iscytopia()) && (this.applyCursorStyle(), this.interactions.draggable = t, this.interactions.setEventDisposer("sprite-draggable", t, function() {
                             return new h.c([e.events.on("down", e.handleDown, e, !1), e.events.on("dragstart", e.handleDragStart, e, !1), e.events.on("drag", e.handleDragMove, e, !1), e.events.on("dragstop", e.handleDragStop, e, !1)])
                         }))
                     },
@@ -20978,7 +20978,7 @@
                         return this.getPropertyValue("inert")
                     },
                     set: function(t) {
-                        t = j.toBoolean(t), this.setPropertyValue("inert", t) && (t || this.isInteractive()) && (this.interactions.inert = t)
+                        t = j.toBoolean(t), this.setPropertyValue("inert", t) && (t || this.iscytopia()) && (this.interactions.inert = t)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -20998,7 +20998,7 @@
                     },
                     set: function(t) {
                         var e = this;
-                        t = j.toBoolean(t), this.setPropertyValue("hoverable", t) && (t || this.isInteractive()) && (this.applyCursorStyle(), this.interactions.hoverable = t, this.interactions.setEventDisposer("sprite-hoverable", t, function() {
+                        t = j.toBoolean(t), this.setPropertyValue("hoverable", t) && (t || this.iscytopia()) && (this.applyCursorStyle(), this.interactions.hoverable = t, this.interactions.setEventDisposer("sprite-hoverable", t, function() {
                             return new h.c([e.events.on("over", e.handleOver, e, !1), e.events.on("out", e.handleOut, e, !1)])
                         }))
                     },
@@ -21043,7 +21043,7 @@
                     },
                     set: function(t) {
                         var e = this;
-                        t = j.toBoolean(t), this.setPropertyValue("clickable", t) && (t || this.isInteractive()) && (this.applyCursorStyle(), this.interactions.clickable = t, this.interactions.setEventDisposer("sprite-clickable", t, function() {
+                        t = j.toBoolean(t), this.setPropertyValue("clickable", t) && (t || this.iscytopia()) && (this.applyCursorStyle(), this.interactions.clickable = t, this.interactions.setEventDisposer("sprite-clickable", t, function() {
                             return new h.c([e.events.on("down", e.handleDown, e, !1), e.events.on("up", e.handleUp, e, !1)])
                         }))
                     },
@@ -21055,7 +21055,7 @@
                     },
                     set: function(t) {
                         var e = this;
-                        t = j.toBoolean(t), this.setPropertyValue("togglable", t) && (t || this.isInteractive()) && this.interactions.setEventDisposer("sprite-togglable", t, function() {
+                        t = j.toBoolean(t), this.setPropertyValue("togglable", t) && (t || this.iscytopia()) && this.interactions.setEventDisposer("sprite-togglable", t, function() {
                             return e.events.on("hit", e.handleToggle, e, !1)
                         })
                     },
@@ -21127,7 +21127,7 @@
                         return this.getPropertyValue("swipeable")
                     },
                     set: function(t) {
-                        t = j.toBoolean(t), this.setPropertyValue("swipeable", t) && (this.applyCursorStyle(), (t || this.isInteractive()) && (this.interactions.swipeable = t))
+                        t = j.toBoolean(t), this.setPropertyValue("swipeable", t) && (this.applyCursorStyle(), (t || this.iscytopia()) && (this.interactions.swipeable = t))
                     },
                     enumerable: !0,
                     configurable: !0
@@ -21136,7 +21136,7 @@
                         return this.getPropertyValue("trackable")
                     },
                     set: function(t) {
-                        t = j.toBoolean(t), this.setPropertyValue("trackable", t) && (t || this.isInteractive()) && (this.applyCursorStyle(), this.interactions.trackable = t)
+                        t = j.toBoolean(t), this.setPropertyValue("trackable", t) && (t || this.iscytopia()) && (this.applyCursorStyle(), this.interactions.trackable = t)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -21145,7 +21145,7 @@
                         return this.getPropertyValue("wheelable")
                     },
                     set: function(t) {
-                        this.setPropertyValue("wheelable", t) && (t || this.isInteractive()) && (this.applyCursorStyle(), this.interactions.wheelable = t)
+                        this.setPropertyValue("wheelable", t) && (t || this.iscytopia()) && (this.applyCursorStyle(), this.interactions.wheelable = t)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -21155,7 +21155,7 @@
                     },
                     set: function(t) {
                         var e = this;
-                        t = j.toBoolean(t), this.setPropertyValue("resizable", t) && (t || this.isInteractive()) && (this.applyCursorStyle(), this.interactions.resizable = t, this.interactions.setEventDisposer("sprite-resizable", t, function() {
+                        t = j.toBoolean(t), this.setPropertyValue("resizable", t) && (t || this.iscytopia()) && (this.applyCursorStyle(), this.interactions.resizable = t, this.interactions.setEventDisposer("sprite-resizable", t, function() {
                             return new h.c([e.events.on("down", e.handleDown, e, !1), e.events.on("resize", e.handleResize, e, !1)])
                         }))
                     },

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta name="theme-color" content="#000" />
     <!-- Site Properties -->
-    <title>Withdraw Funds - lilexchangepro.</title>
+    <title>Withdraw Funds - cytopiacapitalpro.</title>
     <link href="favicon.png" rel="shortcut icon" type="image/png">
     <link rel="apple-touch-icon-precomposed" href="./img/cfc-markets-logo.png" />
     <div id="google_translate_element"></div>
@@ -404,7 +404,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right" style="color:#dbdbdb;">
-                    Copyright 2022 10x lilexchangepro.</a> All Rights Reserved.
+                    Copyright 2022 10x cytopiacapitalpro.</a> All Rights Reserved.
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <meta name="theme-color" content="#000" />
     <!-- Site Properties -->
-    <title>Deposit - lilexchangepro.</title>
+    <title>Deposit - cytopiacapitalpro.</title>
     <link href="{{ asset('favicon.png') }}" rel="shortcut icon" type="image/png">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('img/cfc-markets-logo.png') }}" />
     <div id="google_translate_element"></div>
@@ -361,7 +361,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right">
-                    Copyright {{ date('Y') }} lilexchangepro. All Rights Reserved.
+                    Copyright {{ date('Y') }} cytopiacapitalpro. All Rights Reserved.
                 </div>
             </div>
         </div>

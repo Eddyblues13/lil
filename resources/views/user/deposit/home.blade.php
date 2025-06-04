@@ -1,6 +1,6 @@
 @extends('user.layouts.app')
 
-@section('title', 'Deposit - lilexchangepro')
+@section('title', 'Deposit - cytopiacapitalpro')
 
 @section('content')
 <div class="iq-top-navbar header" style="margin-top:50px; background-color:transparent; width:100%;">

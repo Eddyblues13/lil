@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Mail\WelcomeEmail;
 use Illuminate\Http\Request;
 use App\Mail\VerificationEmail;
 use Illuminate\Support\Facades\DB;
@@ -400,6 +401,7 @@ class RegisterController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\JsonResponse
      */
+
     public function register(Request $request)
     {
         // Validate the request
@@ -432,8 +434,8 @@ class RegisterController extends Controller
             ], 422);
         }
 
-        // Create the user
         try {
+            // Create the user
             $user = new User();
             $user->first_name = $request->first_name;
             $user->middle_name = $request->middle_name;
@@ -443,28 +445,44 @@ class RegisterController extends Controller
             $user->password = Hash::make($request->password);
             $user->occupation = $request->occupation;
             $user->phone_number = $request->phone;
-            $user->country_code = $request->country;
+            $user->country = $request->country;
             $user->city = $request->city;
-            $user->currency_code = $request->currency;
+            $user->currency = $request->currency;
             $user->gender = $request->gender;
             $user->marital_status = $request->marital_status;
             $user->address = $request->address;
             $user->save();
 
-            // You might want to send a verification email here
-            // event(new Registered($user));
+            // Create related balances for the user
+            $user->deposit()->create(['amount' => 0]);
+            $user->earning()->create(['amount' => 0]);
+            $user->withdrawal()->create(['amount' => 0]);
 
+            // Prepare welcome message (optional)
+            $full_name = $user->username;
+            $email = $user->email;
+
+            $wMessage = "<p style='line-height: 24px;margin-bottom:15px;'>Hello $full_name,</p>
+            <p>We are so happy to have you on board, and thank you for joining us.</p>
+            <p><strong>Email Address:</strong> $email </p>
+            <p>Don't hesitate to get in touch if you have any questions; we'll always get back to you.</p>";
+
+            // Send welcome email (Uncomment when ready)
+            // Mail::to($email)->send(new WelcomeEmail($wMessage));
+
+            // Log in the user
             Auth::login($user);
 
             return response()->json([
                 'success' => true,
-                'message' => 'Registration successful! Redirecting to login...',
+                'message' => 'Registration successful! Redirecting...',
                 'redirect' => route('home')
             ]);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Registration failed. Please try again later.'
+                'message' => 'Registration failed. Please try again later.',
+                'error' => $e->getMessage(), // Optional: for debugging, remove in production
             ], 500);
         }
     }

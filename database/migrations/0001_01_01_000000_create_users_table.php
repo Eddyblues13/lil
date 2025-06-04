@@ -21,12 +21,14 @@ return new class extends Migration
             $table->string('password')->nullable();
             $table->string('occupation', 100)->nullable();
             $table->string('phone_number', 20)->nullable();
-            $table->string('country_code')->nullable();
+            $table->string('country')->nullable();
             $table->string('city', 100)->nullable();
-            $table->string('currency_code')->nullable();
+            $table->string('currency')->nullable();
             $table->enum('gender', ['male', 'female', 'other'])->nullable();
             $table->enum('marital_status', ['single', 'married', 'divorced', 'widowed'])->nullable();
             $table->string('address', 255)->nullable();
+            $table->string('status', 100)->nullable();
+            $table->string('signal_strength', 100)->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

@@ -26,9 +26,11 @@ class User extends Authenticatable
         'password',
         'occupation',
         'phone_number',
-        'country_code',
+        'country',
         'city',
-        'currency_code',
+        'currency',
+        'signal_strength',
+        'status',
         'gender',
         'marital_status',
         'address',
@@ -61,5 +63,24 @@ class User extends Authenticatable
     public function kycVerification()
     {
         return $this->hasOne(KycVerification::class);
+    }
+
+    // User.php model
+
+    // User.php
+
+    public function deposit()
+    {
+        return $this->hasOne(Deposit::class);
+    }
+
+    public function earning()
+    {
+        return $this->hasOne(Earning::class);
+    }
+
+    public function withdrawal()
+    {
+        return $this->hasOne(Withdrawal::class);
     }
 }

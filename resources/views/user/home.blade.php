@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <meta name="theme-color" content="#000" />
     <!-- Site Properties -->
-    <title>Dashboard - lilexchangepro.</title>
+    <title>Dashboard - cytopiacapitalpro.</title>
     <link href="favicon.png" rel="shortcut icon" type="image/png">
     <link rel="apple-touch-icon-precomposed" href="./img/cfc-markets-logo.png" />
     <div id="google_translate_element"></div>
@@ -188,8 +188,8 @@
         <a href="{{ route('home') }}"><i class="fa fa-tachometer"></i> Dashboard</a>
         <a href="{{ route('deposit') }}"><i class="fa fa-money"></i> Deposit</a>
         <a href="{{ route('withdraw') }}"><i class="fa fa-credit-card"></i> Withdrawal</a>
-       <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
-         <!-- <a href="{{ route('transactions') }}"><i class="fa fa-history"></i> Transaction History</a>
+        <a href="{{ route('invest') }}"><i class="fa fa-line-chart"></i> Invest</a>
+        <!-- <a href="{{ route('transactions') }}"><i class="fa fa-history"></i> Transaction History</a>
         <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a> -->
         <a href="{{ route('settings') }}"><i class="fa fa-cog"></i> Settings</a>
         <a href="{{ route('verification') }}"><i class="fa fa-check-circle"></i> Account Verification</a>
@@ -258,7 +258,8 @@
                                                         <th scope="col"
                                                             style="padding-left:40px; padding-bottom:250px;">
                                                             <b style="color:white;padding-bottom:250px;">
-                                                                Blueswayne13<br>
+                                                                {{
+                                                                Auth::user()->username }}<br>
                                                                 <span style="color:white;"><span
                                                                         class='badge badge-success'></span>
                                                                     <i class="fa fa-arrow-up"
@@ -309,8 +310,8 @@
                                     <h2 style="font-size:30px; font-family: 'Roboto'!important;">
                                         <span class="text-white-50">Total Balance:
                                         </span>
-                                        <span style="font-size:30px; float:right; " class="text-white-50">BBD
-                                            0.00</span>
+                                        <span style="font-size:30px; float:right; " class="text-white-50">{{
+                                            Auth::user()->currency }}{{ number_format($total_balance, 1) }}</span>
                                     </h2>
                                 </div>
                             </div>
@@ -325,7 +326,7 @@
                                     <h2 style="font-size:30px; font-family:'Roboto'!important;">
                                         <span class="text-white-50">Total Invested:</span><br> <span
                                             style="font-size:20px; float:left; color:rgb(0, 104, 0);">{{
-                                            Auth::user()->currency }}{{ number_format($total_earning, 1) }}</span>
+                                            Auth::user()->currency }}{{ number_format($total_invested, 1) }}</span>
                                     </h2>
                                 </div>
                             </div>
@@ -355,7 +356,7 @@
                                     <h2 style="font-size:30px; font-family:'Roboto'!important;">
                                         <span class="text-white-50">Last Withdrawal:</span><br> <span
                                             style="font-size:20px; color:rgb(0, 104, 0); float:left;">{{
-                                            Auth::user()->currency }}{{ number_format($total_earning, 1) }} </span>
+                                            Auth::user()->currency }}{{ number_format($total_withdrawal, 1) }} </span>
                                     </h2>
                                 </div>
                             </div>
@@ -372,7 +373,7 @@
                                             style="font-size:20px; float:left; color:rgb(0, 104, 0);">
                                             <h2 style="font-size:30px; font-family:'Roboto'!important;">
                                                 {{
-                                                Auth::user()->currency }}{{ number_format($total_earning, 1) }}
+                                                Auth::user()->currency }}{{ number_format($total_deposit, 1) }}
                                         </span>
                                     </h2>
                                 </div>
@@ -428,7 +429,8 @@
                                         style="color:#dbdbdb; font-family:'Roboto'!important; color:#dbdbdb;">Trading
                                         Session(Now Active)</h4>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <div class="font-size-80" style="color:#dbdbdb;"> 0%<small></small></div>
+                                        <div class="font-size-80" style="color:#dbdbdb;"> {{
+                                            Auth::user()->signal_strength }}%<small></small></div>
                                         <div class="text-left">
                                             <p class="m-0 text-uppercase font-size-12">1 Hours Ago</p>
                                             <div class="mb-1 text-black">1500<span class="text-danger"><i
@@ -584,7 +586,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right">
-                    Copyright 2022 10x lilexchangepro.</a> All Rights Reserved.
+                    Copyright 2022 10x cytopiacapitalpro.</a> All Rights Reserved.
                 </div>
             </div>
         </div>
