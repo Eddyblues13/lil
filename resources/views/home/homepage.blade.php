@@ -215,6 +215,53 @@
             </div>
         </div>
     </div>
+
+    <!-- section content start -->
+    <div class="uk-section uk-section-muted uk-padding-large in-wave-3 uk-background-contain uk-background-center"
+        data-uk-parallax="bgy: -200" style="background-color:#000;" data-aos="fade-up" data-aos-duration="1500">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-flex uk-flex-middle" data-uk-grid>
+                <div class="uk-width-1-2@m">
+                    <img class="uk-margin-bottom" src="/static/files/img/in-lazy.gif"
+                        data-src="/static/files/img/in-wave-icon-5.svg" alt="wave-icon" width="64" height="64"
+                        data-uk-img>
+                    <h1 class="uk-margin-remove" style="color:#fff;">Video <span class="">Insights</span><br>from
+                        Experts
+                    </h1>
+                    <p style="color:#E9E8E8;">Watch key videos from professional traders and analysts. Learn at your
+                        pace with exclusive insights and visual strategies, only available to Glaxo Capital Options
+                        clients.</p>
+                    <p class="uk-text-small uk-text-muted" style="color:#E9E8E8;">
+                        Access these and more by creating a free account.
+                        <a href="{{ route('register') }}">
+                            <span class="uk-label uk-text-small uk-border-pill"
+                                style="background-color: rgb(196, 0, 0);">
+                                Sign up
+                            </span>
+                        </a>
+                    </p>
+                </div>
+                <div class="uk-width-1-2@m">
+                    <div class="uk-grid-small uk-child-width-1-2@s" data-uk-grid>
+                        <div class="uk-inline uk-dark in-wave-video">
+                            <video width="100%" height="auto" controls style="border-radius: 10px;">
+                                <source src="{{ asset('videos/video1.mp4') }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="uk-inline uk-dark in-wave-video">
+                            <video width="100%" height="auto" controls style="border-radius: 10px;">
+                                <source src="{{ asset('videos/video2.mp4') }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section content end -->
+
     <script>
         const HomepageApp = {
     //----------- 1. uikit slideshow -----------
