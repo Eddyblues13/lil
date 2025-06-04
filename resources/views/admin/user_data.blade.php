@@ -29,7 +29,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12 ">
-                                    <h1 class="d-inline text-primary">{{$user->username}}</h1>
+                                    <h1 class="d-inline text-primary">{{$user->email}}</h1>
                                     <span></span>
                                     <div class="d-inline">
                                         <div class="float-right btn-group">
