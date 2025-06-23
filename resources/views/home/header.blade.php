@@ -11,7 +11,7 @@
     <meta name="viewport" content="">
     <meta name="theme-color" content="#e9e8f0" />
     <!-- Site Properties -->
-    <title> Cytopia Capital Pro - Best Broker in 2025</title>
+    <title>Cytopia Capital Pro - Best Broker in 2025</title>
     <!-- Critical preload -->
     <link rel="preload" href="{{ asset('static/files/new/js/vendors/uikit.min.js') }}" as="script">
     <link rel="preload" href="{{ asset('static/files/new/css/vendors/uikit.min.css') }}" as="style">
